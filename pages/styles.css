@@ -33,7 +33,60 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
+    align-items: center;
 }
+
+.menu-text {
+    font-family: 'Oswald';
+    margin-left: 15px;
+    color: white;
+}
+
+.menu-text:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: -5px;
+    color: rgb(111,244,168);
+}
+
+.content-social {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.content-social:hover {
+    background-color: rgb(111,244,168);
+    cursor: pointer;
+}
+
+.social-text {
+    font-family: 'Roboto';
+    font-size: 13px;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.social-text:hover {
+    cursor: pointer;
+}
+.content-social-img-text {
+    display: flex;
+    flex-direction: row;
+}
+.content-social-img-text:hover .social-text {
+    color: rgb(111,244,168);
+}
+.content-social-img-text:hover .content-social{
+    background-color: rgb(111,244,168);
+}
+
 
 .about {
     display: flex;
@@ -67,33 +120,114 @@ body {
 }
 
 .backend {
-    width: 500px;
+    width: 100%;
     height: 100px;
     background-color: rgb(45,47,51);
     margin-top: 30px;
     display: flex;
     align-items: left;
     justify-content: center;
+    margin-left: 10px;
+   
+}
+.backend:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #1C1C1C;
+}
+.backend:hover .text-techs {
+    color:rgb(111,244,168);
+}
+
+.backend:hover .text-techs-description {
+    color:rgb(111,244,168);
+}
+
+.text-techs {
+    font-family: 'Roboto'; 
+    font-weight: bold; 
+    font-size: 25px;
+    color: white;
+}
+
+.text-techs:hover {
+    color:rgb(111,244,168);
+    cursor: pointer;
+}
+
+.text-techs-description {
+    font-family: 'Roboto'; 
+    font-weight: bold; 
+    font-size: 13px;
+    color: white;
+    opacity: 0.6;
+}
+
+.text-techs-description:hover {
+    cursor: pointer;
+    color: rgb(111,244,168);
 }
 .frontend {
-    width: 500px;
+    width: 100%;
     height: 100px;
     background-color: rgb(45,47,51);
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px #1C1C1C;
+}
+
+.frontend:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #1C1C1C;
+}
+.frontend:hover .text-techs {
+    color:rgb(111,244,168);
+}
+
+.frontend:hover .text-techs-description {
+    color:rgb(111,244,168);
 }
 
 .db {
-    width: 500px;
+    width: 100%;
     height: 100px;
     background-color: rgb(45,47,51);
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+.db:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #1C1C1C;
+}
+.db:hover .text-techs {
+    color:rgb(111,244,168);
+}
+
+.db:hover .text-techs-description {
+    color:rgb(111,244,168);
 }
 
 .projects {
-    width: 500px;
+    width: 100%;
     height: 100px;
     background-color: rgb(45,47,51);
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.projects:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #1C1C1C;
+}
+
+.projects:hover .text-techs {
+    color:rgb(111,244,168);
+}
+
+.projects:hover .text-techs-description {
+    color:rgb(111,244,168);
 }
 
 @media screen and (max-width: 1199px) {
