@@ -80,6 +80,10 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+.content-social-img-text:hover {
+    cursor: pointer;
+}
 .content-social-img-text:hover .social-text {
     color: rgb(111,244,168);
 }
@@ -173,7 +177,6 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     justify-content: center;
-    box-shadow: 1px 1px 1px 1px #1C1C1C;
 }
 
 .frontend:hover {
