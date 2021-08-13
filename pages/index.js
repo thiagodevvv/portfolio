@@ -21,8 +21,8 @@ export default function Home() {
           <Container className="header" fluid>
             <Container className="nav-bar">
               <Container style={{flexDirection: "row", flex: 1}}>
-                <p style={{fontFamily: 'Oswald', fontSize: 22, color: 'white'}}>Thiago</p> 
-                <p style={{fontFamily: 'Oswald', fontSize: 22, color: 'white', opacity: 0.7, marginLeft: 3}}>Ferrari</p>
+                <p style={{fontFamily: 'Oswald', fontSize:"2.2rem", color: 'white'}}>Thiago</p> 
+                <p style={{fontFamily: 'Oswald', fontSize: "2.2rem", color: 'white', opacity: 0.7, marginLeft: 3}}>Ferrari</p>
               </Container>
               <Container style={{flexDirection: "row", flex:3}}>
                 <p onClick={() => {
@@ -60,20 +60,17 @@ export default function Home() {
                   </Container>
                   <p className="social-text">Send mail</p>
                 </Container>
-                
-                
-                
               </Container>
-            </Container>{/* */}
+            </Container>
             <Container className="about">
 
               <Container className="about-text">
                 <Container style={{backgroundColor: "rgb(111,244,168)", margin: 0, padding:0, width: 160, fontWeight: 'bold', borderRadius: 4}}>
                  {apresentacaoVisible ? <p style={{fontFamily: 'Roboto', fontSize: 15, margin: 4, padding: 0}}>Programador FullStack</p> : ""}
                 </Container>
-                {apresentacaoVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white',letterSpacing: 0.8}}>
+                {apresentacaoVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white',letterSpacing: 0.9}}>
                 Oi, seja bem vindo ao meu portfolio dev!<br/><br/> Me chamo Thiago, tenho 24 anos, moro em Bauru-SP e estou em busca de emprego na área de desenvolvimento.</p> : ""}
-                {sobreMimVisible ? <p align="justify" style={{marginTop: 10,fontSize: 14, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', letterSpacing: 0.8}}>
+                {sobreMimVisible ? <p align="justify" style={{marginTop: 10,fontSize: 14, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', letterSpacing: 0.9}}>
                 Comecei a estudar programação em setembro de 2019. Mas por que eu comecei a estudar programação? 
                 Em 2019 eu tinha 22 anos e trabalhando no atual emprego (Em um almoxarifado hospitalar) decidi que queria trabalhar com algo que eu me identificasse, 
                 que gostasse... Sempre gostei de computador, de jogos, criar servidores piratas (Jogo The Duel) onde tive o primeiro contato de como as coisas funcionavam, 
@@ -83,18 +80,18 @@ export default function Home() {
                 Sempre fui empenhado nos estudos, autodidata e disciplinado, mesmo estando 10 horas fora de casa trabalhando em meu atual emprego me mantive em busca de 
                 conhecimento e colocando em pratica.
                   </p> : ""}
-                {motivosVisible ? <p align="justify" style={{marginTop: 10,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white',letterSpacing: 0.8}}>
+                {motivosVisible ? <p align="justify" style={{marginTop: 10,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
                   <ul>
-                    <li> <p style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Sede de aprendizado e crescimento profissional</p></li>
-                    <li> <p style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Programador raiz, escolho a ferramenta de linguagem de programação ideal para resolver o problema</p></li>
-                    <li> <p style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Aprendo lendo documentação da ferramenta/tecnologia</p></li>
-                    <li> <p style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Forte hábito de pesquisa em inglês para me auxiliar em dificuldades</p></li>
+                    <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Sede de aprendizado e crescimento profissional</p></li>
+                    <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Programador raiz, escolho a ferramenta de linguagem de programação ideal para resolver o problema</p></li>
+                    <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Aprendo lendo documentação da ferramenta/tecnologia</p></li>
+                    <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Forte hábito de pesquisa em inglês para me auxiliar em dificuldades</p></li>
                   </ul>
                   </p> : ""}
               </Container>
 
               <Container className="content-img">
-                <Container style={{backgroundColor: 'rgb(39,41,45)',width: 340, height: 380, borderRadius: "50%"}}>
+                <Container  className="hack-img" >
                   <Image src="/hack.png" width="300" height="380" responsive="true"/>
                 </Container>
                 
@@ -116,13 +113,13 @@ export default function Home() {
                 setFrontEndVisible(false)
                 setDbVisible(false)
                 setProjectsVisible(false)
-              }} className="text-techs">Back-end</p>
+              }}   style={{color: `${backendVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs">Back-end</p>
                 <p  onClick={() => {
                 setBackendVisible(true)
                 setFrontEndVisible(false)
                 setDbVisible(false)
                 setProjectsVisible(false)
-              }} className="text-techs-description">Conheça as tecnologias que utilizo para construir o coração de uma aplicação.</p>
+              }}  style={{color: `${backendVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs-description">Conheça as tecnologias que utilizo para construir o coração de uma aplicação.</p>
               </Container>
               <Container  onClick={() => {
                 setBackendVisible(false)
@@ -135,13 +132,13 @@ export default function Home() {
                 setFrontEndVisible(true)
                 setDbVisible(false)
                 setProjectsVisible(false)
-              }} className="text-techs">Front-end</p>
+              }}  style={{color: `${frontEndVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs">Front-end</p>
                 <p  onClick={() => {
                 setBackendVisible(false)
                 setFrontEndVisible(true)
                 setDbVisible(false)
                 setProjectsVisible(false)
-              }} className="text-techs-description">Conheça as tecnologias que utilizo para construir o visual de uma aplicação.</p>
+              }} style={{color: `${frontEndVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs-description">Conheça as tecnologias que utilizo para construir o visual de uma aplicação.</p>
               </Container>
               <Container onClick={() => {
                 setBackendVisible(false)
@@ -154,13 +151,13 @@ export default function Home() {
                 setFrontEndVisible(false)
                 setDbVisible(true)
                 setProjectsVisible(false)
-              }} className="text-techs">Banco de dados</p>
+              }}  style={{color: `${dbVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs">Banco de dados</p>
                 <p onClick={() => {
                 setBackendVisible(false)
                 setFrontEndVisible(false)
                 setDbVisible(true)
                 setProjectsVisible(false)
-              }} className="text-techs-description">Conheça as tecnologias que utilizo para construir base de dados de uma aplicação.</p>
+              }}  style={{color: `${dbVisible ? "rgb(111,244,168)" : ""}`}}  className="text-techs-description">Conheça as tecnologias que utilizo para construir base de dados de uma aplicação.</p>
               </Container>
               <Container onClick={() => {
                 setBackendVisible(false)
@@ -173,37 +170,68 @@ export default function Home() {
                 setFrontEndVisible(false)
                 setDbVisible(false)
                 setProjectsVisible(true)
-              }} className="text-techs">Projetos</p>
+              }}  style={{color: `${projectsVisible ? "rgb(111,244,168)" : ""}`}}  className="text-techs">Projetos</p>
                 <p  onClick={() => {
                 setBackendVisible(false)
                 setFrontEndVisible(false)
                 setDbVisible(false)
                 setProjectsVisible(true)
-              }} className="text-techs-description">Conheça projetos que já realizei profissionalmente e pessoais</p>
+              }}  style={{color: `${projectsVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs-description">Conheça projetos que já realizei profissionalmente e pessoais</p>
               </Container>
             </Container>
-           {/* Container dos textos */}
            <Container style={{width: "50%"}}>
               {backendVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> : ""}
+               Para construir o coração de uma aplicação utilizo <span style={{color:'rgb(111,244,168)'}}>NodeJS</span>, mas não me limito a tecnologia utilizada, posso construir qualquer API Rest, servidor... com qualquer 
+               tecnologia back-end, exemplo de outras linguagens que já pratiquei:  <span style={{color: '#87CEFA'}}>C#</span> e  <span style={{color: 'yellow'}}>Python</span> </p> : ""}
               {frontEndVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-              The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
-              making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
-              and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, 
-              sometimes by accident, sometimes on purpose (injected humour and the like).</p> : ""}
+                Para construir a interface de uma aplicação eu utilizo as seguintes tecnologias: <span style={{color: 'yellow'}}>JavaScript</span>,
+                <span style={{color: 'rgb(233,98,40)'}}> HTML</span>, <span style={{color: 'rgb(41,101,241)'}}>CSS</span>, 
+                <span style={{color: 'rgb(94,211,243)'}}> ReactJS (NextJS, ContextApi)</span> e <span style={{color: '#7B68EE'}}>React Native.</span>
+              </p> : ""}
               {dbVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-              nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</p> : ""}
+              Para o armazenamento de dados, tenho domínio em: <span style={{color: 'white'}}>SQL(<span style={{color: 'rgb(0,94,134)'}}>My</span><span style={{color: 'rgb(219,127,0)'}}>SQL</span>, 
+              <span style={{color: 'rgb(51,103,145)'}}> PostgreSQL</span>)</span> e <span style={{color: 'rgb(142,193,110)'}}>mongo</span><span style={{color: '#A9A9A9'}}>DB</span>
+              </p> : ""}
               {projectsVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> : ""}
+              <ul>
+                <li> <p style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize:15}}>Projetos profissional</p></li>
+                <p align="justify" style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize:15}}>
+                  1. Meu primeiro projeto feito profissionalmente como freelancer, é uma aplicação de perguntas de direito. Além da tela principal: <a target="_blank" style={{color: 'rgb(111,244,168)'}} href="https://quizdireito.vercel.app">Acesse aqui </a>, 
+                   há também o painel do admin do website, onde ele cadastra as questões, deleta e também gera PDF com as questões. Para construir utilizei NextJS com react-bootstrap para responsividade
+                  no front-end. Para o back-end foi utilizado as Serveless Functions da Vercel com NodeJS e lib PDFmake para gerar os PDF's e banco de dados MongoDB. <a target="_blank" style={{color: 'rgb(111,244,168)'}} href="https://github.com/thiagodevvv/quizdireito">Acesse repositório aqui.</a>
+                </p>
+                <li> <p style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize:15}}>Projetos pessoais</p></li>
+                  <p align="justify" style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize:15}}>
+                    <ul>
+                      <li>
+                      <p style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize: 15}}>
+                        Projeto Rifa Digital <a target="_blank"  href="https://www.linkedin.com/posts/activity-6702524206472601601-NAHT" style={{color: 'rgb(111,244,168)'}} > Acesse aqui para visualizar</a>, nesse projeto o usuário pode publicar/adquirir rifas. Techs utilizadas: NodeJS, ReactJS, HTML CSS e PostgreSQL. <br/>
+                        Técnicas back-end: Express para criar o servidor, JWT para gerar token para o usuário, middlewares de segurança, knex para realizar querys no PostgreSQL e  
+                        AWS-SDK Multer s3 para armazenamento de imagens das rifas criadas <br/>
+                        Técnicas front-end: Context Api, parar compartilhar informações em qualquer componente react, um grande aprendizado para facilitar o desenvolvimento com react.
+                        Drop de arquivos, e styled components.  <a target="_blank" style={{color: "rgb(111,244,168)"}} href="https://github.com/thiagodevvv/Rifa-Digital"> Acesse repositório aqui</a>
+                      </p>
+                      
+                      
+                      </li>
+                      <li> <p style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize: 15}}>
+                        Projeto Xadrez Timer/Selecionar Player <a target="_blank" href="https://www.linkedin.com/posts/activity-6703704192504147968--K-d" style={{color: 'rgb(111,244,168)'}}> 
+                        Acesse aqui para visualizar.</a><br/>
+                        Projeto utilizando React Native, <a target="_blank" href="https://github.com/thiagodevvv/appchess" style={{color: 'rgb(111,244,168)'}}> Acesse repositório aqui.</a> 
+                        
+                        </p>
+                      </li>
+
+                      <li> <p style={{fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', fontSize: 15}}>
+                        Projeto microservices com streams e fila em NodeJS <a target="_blank" href="https://github.com/thiagodevvv/microservices-nodejs" style={{color: 'rgb(111,244,168)'}}> 
+                        Acesse repositório.</a>         
+                        </p>
+                      </li>
+                    </ul>
+                   
+                  </p>
+              </ul>
+              </p> : ""}
            </Container>
           </Container>
     </Container>
