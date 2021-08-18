@@ -24,7 +24,7 @@ export default function Home() {
                 <p style={{fontFamily: 'Oswald', fontSize:"2.2rem", color: 'white'}}>Thiago</p> 
                 <p style={{fontFamily: 'Oswald', fontSize: "2.2rem", color: 'white', opacity: 0.7, marginLeft: 3}}>Ferrari</p>
               </Container>
-              <Container style={{flexDirection: "row", flex:3}}>
+              <Container style={{flexDirection: "row", flex:3, marginLeft: -30}}>
                 <p onClick={() => {
                   setApresentacaoVisible(true)
                   setSobreMimVisible(false)
@@ -41,7 +41,7 @@ export default function Home() {
                   setMotivosVisible(true)
                 }} style={{color: `${motivosVisible ? "rgb(111,244,168)" : ""}`}} className="menu-text">Motivos para me contratar</p>
               </Container>
-              <Container style={{flexDirection: "row", flex: 2}}>
+              <Container style={{flexDirection: "row", flex: 2, marginLeft:-30}}>
                 <Container onClick={() => window.open('https://github.com/thiagodevvv','_blank').focus()} className="content-social-img-text">
                   <Container  className="content-social">
                   <img src="/bxl-github.svg" width="30" height="30"></img>
@@ -68,9 +68,9 @@ export default function Home() {
                 <Container style={{backgroundColor: "rgb(111,244,168)", margin: 0, padding:0, width: 160, fontWeight: 'bold', borderRadius: 4}}>
                  {apresentacaoVisible ? <p style={{fontFamily: 'Roboto', fontSize: 15, margin: 4, padding: 0}}>Programador FullStack</p> : ""}
                 </Container>
-                {apresentacaoVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white',letterSpacing: 0.9}}>
-                Oi, seja bem vindo ao meu portfolio dev!<br/><br/> Me chamo Thiago, tenho 24 anos, moro em Bauru-SP e estou em busca de emprego na área de desenvolvimento.</p> : ""}
-                {sobreMimVisible ? <p align="justify" style={{marginTop: 10,fontSize: 14, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white', letterSpacing: 0.9}}>
+                {apresentacaoVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
+                Oi, seja bem vindo ao meu portfolio dev!<br/><br/> Me chamo Thiago, tenho 24 anos, sou de Bauru-SP e estou em busca de emprego na área de desenvolvimento.</p> : ""}
+                {sobreMimVisible ? <p align="justify" style={{marginTop: 10,fontSize: 14, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
                 Comecei a estudar programação em setembro de 2019. Mas por que eu comecei a estudar programação? 
                 Em 2019 eu tinha 22 anos e trabalhando no atual emprego (Em um almoxarifado hospitalar) decidi que queria trabalhar com algo que eu me identificasse, 
                 que gostasse... Sempre gostei de computador, de jogos, criar servidores piratas (Jogo The Duel) onde tive o primeiro contato de como as coisas funcionavam, 
@@ -80,7 +80,7 @@ export default function Home() {
                 Sempre fui empenhado nos estudos, autodidata e disciplinado, mesmo estando 10 horas fora de casa trabalhando em meu atual emprego me mantive em busca de 
                 conhecimento e colocando em pratica.
                   </p> : ""}
-                {motivosVisible ? <p align="justify" style={{marginTop: 10,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
+                {motivosVisible ? <p style={{marginTop: 10,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
                   <ul>
                     <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Sede de aprendizado e crescimento profissional</p></li>
                     <li> <p  style={{fontFamily: 'Roboto', fontSize: 15, fontWeight: 'bold', color: 'white'}}>Programador raiz, escolho a ferramenta de linguagem de programação ideal para resolver o problema</p></li>
@@ -101,7 +101,7 @@ export default function Home() {
           </Container>
           <Container className="content" fluid>
             {/* Container dos butoes */}
-            <Container style={{display: 'flex', flexDirection : 'column', width: "50%", marginLeft:0}}>
+            <Container className="container-opts">
               <Container onClick={() => {
                 setBackendVisible(true)
                 setFrontEndVisible(false)
@@ -179,7 +179,7 @@ export default function Home() {
               }}  style={{color: `${projectsVisible ? "rgb(111,244,168)" : ""}`}} className="text-techs-description">Conheça projetos que já realizei profissionalmente e pessoais</p>
               </Container>
             </Container>
-           <Container style={{width: "50%"}}>
+           <Container className="container-describle">
               {backendVisible ? <p align="justify" style={{marginTop: 30,fontSize: 15, fontFamily: 'Roboto', fontWeight: 'bold', color: 'white'}}>
                Para construir o coração de uma aplicação utilizo <span style={{color:'rgb(111,244,168)'}}>NodeJS</span>, mas não me limito a tecnologia utilizada, posso construir qualquer API Rest, servidor... com qualquer 
                tecnologia back-end, exemplo de outras linguagens que já pratiquei:  <span style={{color: '#87CEFA'}}>C#</span> e  <span style={{color: 'yellow'}}>Python</span> </p> : ""}

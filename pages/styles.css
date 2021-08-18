@@ -130,6 +130,17 @@ body {
     margin-bottom: 20px;
 }
 
+.container-opts {
+    width: 50%;
+}
+
+.container-describle {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 0px;
+}
+
 .backend {
     width: 100%;
     height: auto;
@@ -245,6 +256,20 @@ body {
 @media screen and (max-width: 1199px) {
     .nav-bar {
         flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        flex-direction: column;
+    }
+    .container-describle {
+        width: 100%;
+    }
+    .container-opts {
+        width: 100%;
+        padding: 0px;
     }
 
 }
