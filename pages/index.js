@@ -24,7 +24,10 @@ export default function Home() {
                 <p style={{fontFamily: 'Oswald', fontSize:"2.2rem", color: 'white'}}>Thiago</p> 
                 <p style={{fontFamily: 'Oswald', fontSize: "2.2rem", color: 'white', opacity: 0.7, marginLeft: 3}}>Ferrari</p>
               </Container>
-              <Container style={{flexDirection: "row", flex:3, marginLeft: -30}}>
+              <Container className="menu-nav-bar">
+                <img src="btn-menu.png" width="30" height="30"/>
+              </Container>
+              <Container className="nav-bar-opts">
                 <p onClick={() => {
                   setApresentacaoVisible(true)
                   setSobreMimVisible(false)
