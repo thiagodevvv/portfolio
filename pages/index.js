@@ -11,6 +11,8 @@ export default function Home() {
   const [frontEndVisible, setFrontEndVisible] = useState(false)
   const [dbVisible, setDbVisible] = useState(false)
   const [projectsVisible, setProjectsVisible] = useState(false)
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [isOpenNav, setIsOpenNav] = useState(false)
   return (
       <body>
         <Container className="container" fluid>
@@ -20,12 +22,9 @@ export default function Home() {
           </Head>
           <Container className="header" fluid>
             <Container className="nav-bar">
-              <Container style={{flexDirection: "row", flex: 1}}>
+              <Container style={{flexDirection: "row", flex: 1, marginLeft:-35}}>
                 <p style={{fontFamily: 'Oswald', fontSize:"2.2rem", color: 'white'}}>Thiago</p> 
                 <p style={{fontFamily: 'Oswald', fontSize: "2.2rem", color: 'white', opacity: 0.7, marginLeft: 3}}>Ferrari</p>
-              </Container>
-              <Container className="menu-nav-bar">
-                <img src="btn-menu.png" width="30" height="30"/>
               </Container>
               <Container className="nav-bar-opts">
                 <p onClick={() => {
@@ -44,7 +43,7 @@ export default function Home() {
                   setMotivosVisible(true)
                 }} style={{color: `${motivosVisible ? "rgb(111,244,168)" : ""}`}} className="menu-text">Motivos para me contratar</p>
               </Container>
-              <Container style={{flexDirection: "row", flex: 2, marginLeft:-30}}>
+              <Container style={{flexDirection: "row", flex: 2, marginLeft:-35,     padding: 0}}>
                 <Container onClick={() => window.open('https://github.com/thiagodevvv','_blank').focus()} className="content-social-img-text">
                   <Container  className="content-social">
                   <img src="/bxl-github.svg" width="30" height="30"></img>
@@ -63,6 +62,38 @@ export default function Home() {
                   </Container>
                   <p className="social-text">Send mail</p>
                 </Container>
+              </Container>
+              <Container onClick={() => {
+                if(isOpenMenu) {
+                  setIsOpenNav(false)
+                  setIsOpenMenu(false)
+                  setApresentacaoVisible(false)
+                  setSobreMimVisible(false)
+                  setMotivosVisible(false)
+                }else {
+                  setIsOpenMenu(true)
+                  setIsOpenNav(true)
+                }
+              }} className="menu-nav-bar">
+                <img style={{display: `${isOpenMenu ? "none" : "flex"}`}} src="btn-menu.png" width="30" height="30"/>
+                <img style={{display: `${isOpenMenu ? "flex" : "none"}`}} src="close-menu.png" width="40" height="40"/>
+              </Container>
+              <Container style={{display: `${isOpenNav ? "flex" : "none"}`}} className="nav-bar-opts-responsive">
+                <p onClick={() => {
+                  setApresentacaoVisible(true)
+                  setSobreMimVisible(false)
+                  setMotivosVisible(false)
+                }}  style={{color: `${apresentacaoVisible ? "rgb(111,244,168)" : ""}`}} className="menu-text">Apresentação</p>
+                <p onClick={() => {
+                  setApresentacaoVisible(false)
+                  setSobreMimVisible(true)
+                  setMotivosVisible(false)
+                }}  style={{color: `${sobreMimVisible ? "rgb(111,244,168)" : ""}`}} className="menu-text">Sobre mim</p>
+                <p onClick={() => {
+                  setApresentacaoVisible(false)
+                  setSobreMimVisible(false)
+                  setMotivosVisible(true)
+                }} style={{color: `${motivosVisible ? "rgb(111,244,168)" : ""}`}} className="menu-text">Motivos para me contratar</p>
               </Container>
             </Container>
             <Container className="about">
